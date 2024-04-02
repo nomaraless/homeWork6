@@ -63,6 +63,5 @@ public class Main {
             byte result = (byte) (multiTable * i);
             System.out.println("2 * " + i + " = " + result);
         }
-
     }
 }
