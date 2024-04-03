@@ -23,11 +23,10 @@ public class Main {
             System.out.println(i);
         }
         //Задача 5
-        for (int i = 1904; i <= 2101; i = i + 4) {
-            if (i % 100 == 0) {
-                continue;
-            }
-            System.out.println(i + " год является високосным");
+        for (int i = 1904; i <= 2096; i = i + 4) {
+            if (i % 400 == 0 && i % 4 == 0 || i % 4 == 0 && !(i % 100 == 0)){
+                System.out.println(i + " год является високосным");
+        }
         }
         System.out.println();
         //Задача 6
@@ -51,7 +50,7 @@ public class Main {
         //Задача 9
         double depAmount = 29000;
         double sav = 0;
-        for (int i = 0; i <= 12; i++) {
+        for (int i = 1; i <= 12; i++) {
             sav = sav + depAmount;
             sav = sav + sav / 100;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + String.format("%.2f", sav) + " рублей");
